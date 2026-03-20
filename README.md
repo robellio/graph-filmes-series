@@ -3,7 +3,7 @@
 ![Visualização do Grafo](src/exports/graph.png)
 
 ## Descrição
-Este projeto implementa um banco de dados de grafos para filmes e séries usando **Neo4j** e a línguagem **Cypher**. O modelo inclui usuários, filmes, séries, atores, diretores e gêneros, com relacionamentos como `ACTED_IN`, `DIRECTED`, `WATCHED` e `IN_GENRE`.
+Este projeto implementa um banco de dados de grafos para filmes e séries usando **Neo4j** e a linguagem **Cypher**. O modelo inclui usuários, filmes, séries, atores, diretores e gêneros, com relacionamentos como `ACTED_IN`, `DIRECTED`, `WATCHED` e `IN_GENRE`.
 
 ## Objetivo 
 Demonstar na prática como modelar dados complexos e interconectados em grafos, explorando consultas avançadas que seriam complexas em bancos relacionais.
@@ -30,9 +30,16 @@ Demonstar na prática como modelar dados complexos e interconectados em grafos, 
 ## Como Executar o Projeto 
 
 ### Pré-requisitos 
--[Neo4j Desktop](https://neo4j.com/download/) ou [Neo4j AuraDB Free](https://neo4j.com/cloud/aura-free)
+- [Neo4j Desktop](https://neo4j.com/download/) ou [Neo4j AuraDB Free](https://neo4j.com/cloud/aura-free)
 - (Opcional) Cliente Cypher como Neo4j Browser
 
 ### Passo a Passo
 
 1. **Clone o repositório**
+```bash
+git clone https://github.com/robellio/graph-filmes-series
+
+
+2. Inicie uma instância Neo4j 
+- Local: Crie um banco no Neo4j Desktop 
+- Nuvem: Crie uma instância gratuita em **AuraDB**
