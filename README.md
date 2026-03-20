@@ -1,6 +1,6 @@
 # 🎞️ Graph Database de Filmes e Séries com Neo4j 
 
-![Visualização do Grafo](exports/graph.png)
+![Visualização do Grafo](src/exports/graph.png)
 
 ## Descrição
 Este projeto implementa um banco de dados de grafos para filmes e séries usando **Neo4j** e a línguagem **Cypher**. O modelo inclui usuários, filmes, séries, atores, diretores e gêneros, com relacionamentos como `ACTED_IN`, `DIRECTED`, `WATCHED` e `IN_GENRE`.
@@ -25,7 +25,7 @@ Demonstar na prática como modelar dados complexos e interconectados em grafos, 
 - `(:Movie|:Series)-[:IN_GENRE]->(:Genre)`
 
 ### Diagrama do Modelo 
-![Diagrama do Esquema](docs/model/diagram.png)
+![Diagrama do Esquema](src/model/diagram.png)
 
 ## Como Executar o Projeto 
 
