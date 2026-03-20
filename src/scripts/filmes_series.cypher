@@ -343,87 +343,86 @@ MERGE (s14:Series {id: 'series_14'})
 
 
 
-MERGE (a:Actor {name: 'Keanu Reeves'})
-MERGE (m:Movie {title: 'The Matrix'}) 
+MATCH (a:Actor {name: 'Keanu Reeves'})
+MATCH (m:Movie {title: 'The Matrix'}) 
 MERGE (a)-[:ACTED_IN {role: 'Neo'}]->(m);
 
-MERGE (d:Director {name: 'Lana Wachowski'})
-MERGE (m:Movie {title: 'The Matrix'}) 
+MATCH (d:Director {name: 'Lana Wachowski'})
+MATCH (m:Movie {title: 'The Matrix'}) 
 MERGE (d)-[:DIRECTED]->(m);
 
-MERGE (m:Movie {title: 'The Matrix'})
-MERGE (g:Genre {name: 'Sci-Fi'}) 
+MATCH (m:Movie {title: 'The Matrix'})
+MATCH (g:Genre {name: 'Sci-Fi'}) 
 MERGE (m)-[:IN_GENRE]->(g);
 
-MERGE (m:Movie {title: 'The Matrix'}) 
-MERGE (g:Genre {name: 'Action'})
+MATCH (m:Movie {title: 'The Matrix'}) 
+MATCH (g:Genre {name: 'Action'})
 MERGE (m)-[:IN_GENRE]->(g);
 
 // WATCHED 
-MERGE (u:User {email: 'thiago@seugmail.com'})
-MERGE (m:Movie {title: 'The Matrix'})
+MATCH (u:User {email: 'thiago@seugmail.com'})
+MATCH (m:Movie {title: 'The Matrix'})
 MERGE (u)-[:WATCHED {rating: 9, date: '2024-02-15', review: 'Revolucionário!'}]->(m);
 
 
-MERGE (a:Actor {name: 'Leonardo DiCaprio'})
-MERGE (m:Movie {title: 'Inception'}) 
+MATCH (a:Actor {name: 'Leonardo DiCaprio'})
+MATCH (m:Movie {title: 'Inception'}) 
 MERGE (a)-[:ACTED_IN {role: 'Cobb'}]->(m);
 
-MERGE (a:Actor {name: 'Al Pacino'})
-MERGE (m:Movie {title: 'The Godfather'}) 
+MATCH (a:Actor {name: 'Al Pacino'})
+MATCH (m:Movie {title: 'The Godfather'}) 
 MERGE (a)-[:ACTED_IN {role: 'Michael Corleone'}]->(m);
 
-MERGE (a:Actor {name: 'John Travolta'})
-MERGE (m:Movie {title: 'Pulp Fiction'}) 
+MATCH (a:Actor {name: 'John Travolta'})
+MATCH (m:Movie {title: 'Pulp Fiction'}) 
 MERGE (a)-[:ACTED_IN {role: 'Vincent Vega'}]->(m);
 
-MERGE (a:Actor {name: 'Christian Bale'})
-MERGE (m:Movie {title: 'The Dark Knight'}) 
+MATCH (a:Actor {name: 'Christian Bale'})
+MATCH (m:Movie {title: 'The Dark Knight'}) 
 MERGE (a)-[:ACTED_IN {role: 'Bruce Wayne'}]->(m);
 
-MERGE (a:Actor {name: 'John Travolta'})
-MERGE (m:Movie {title: 'Pulp Fiction'}) 
-MERGE (a)-[:ACTED_IN {role: 'Vincent Vega'}]->(m);
-
-MERGE (a:Actor {name: 'Brad Pitt'})
-MERGE (m:Movie {title: 'Fight Club'}) 
+MATCH (a:Actor {name: 'Brad Pitt'})
+MATCH (m:Movie {title: 'Fight Club'}) 
 MERGE (a)-[:ACTED_IN {role: 'Tyler Durden'}]->(m);
 
-MERGE (a:Actor {name: 'Matthew McConaughey'})
-MERGE (m:Movie {title: 'Interstellar'}) 
+MATCH (a:Actor {name: 'Matthew McConaughey'})
+MATCH (m:Movie {title: 'Interstellar'}) 
 MERGE (a)-[:ACTED_IN {role: 'Cooper'}]->(m);
 
-MERGE (a:Actor {name: 'Song Kang-ho'})
-MERGE (m:Movie {title: 'Parasite'}) 
+MATCH (a:Actor {name: 'Song Kang-ho'})
+MATCH (m:Movie {title: 'Parasite'}) 
 MERGE (a)-[:ACTED_IN {role: 'Kim Ki-taek'}]->(m);
 
 
-MERGE (a:Actor {name: 'Elijah Wood'})
-MERGE (m:Movie {title: 'The Lord of the Rings: The Fellowship of the Ring'}) 
+MATCH (a:Actor {name: 'Elijah Wood'})
+MATCH (m:Movie {title: 'The Lord of the Rings: The Fellowship of the Ring'}) 
 MERGE (a)-[:ACTED_IN {role: 'Frodo Baggins'}]->(m);
 
 
-MERGE (a:Actor {name: 'Harrison Ford'})
-MERGE (m:Movie {title: 'Star Wars: Episode IV - A New Hope'}) 
+MATCH (a:Actor {name: 'Harrison Ford'})
+MATCH(m:Movie {title: 'Star Wars: Episode IV - A New Hope'}) 
 MERGE (a)-[:ACTED_IN {role: 'Han Solo'}]->(m);
 
 
-MERGE (a:Actor {name: 'Tim Robbins'})
-MERGE (m:Movie {title: 'The Shawshank Redemption'}) 
+MATCH (a:Actor {name: 'Tim Robbins'})
+MATCH (m:Movie {title: 'The Shawshank Redemption'}) 
 MERGE (a)-[:ACTED_IN {role: 'Andy Dufresne'}]->(m);
 
+MERGE (a:Actor {name: 'Matt Damon'})
+MERGE (m:Movie {title: 'Saving Private Ryan'})
+MERGE (a)-[:ACTED_IN {role: 'Private Ryan'}]->(m);
 
 // Gladiator 
-MERGE (a:Actor {name: 'Russell Crowe'})
-MERGE (m:Movie {title: 'Gladiator'}) 
+MATCH (a:Actor {name: 'Russell Crowe'})
+MATCH (m:Movie {title: 'Gladiator'}) 
 MERGE (a)-[:ACTED_IN {role: 'Maximus'}]->(m);
 
-MERGE (a:Actor {name: 'Jodie Foster'})
-MERGE (m:Movie {title: 'The Silence of the Lambs'}) 
+MATCH (a:Actor {name: 'Jodie Foster'})
+MATCH (m:Movie {title: 'The Silence of the Lambs'}) 
 MERGE (a)-[:ACTED_IN {role: 'Clarice Starling'}]->(m);
 
-MERGE (a:Actor {name: 'Tom Hanks'})
-MERGE (m:Movie {title: 'Saving Private Ryan'}) 
+MATCH (a:Actor {name: 'Tom Hanks'})
+MATCH (m:Movie {title: 'Saving Private Ryan'}) 
 MERGE (a)-[:ACTED_IN {role: 'Captain Miller'}]->(m);
 
 // Diretores
@@ -491,187 +490,200 @@ MATCH (d:Director {name: 'Christopher Nolan'})
 MATCH (m:Movie {title: 'Oppenheimer'}) 
 MERGE (d)-[:DIRECTED]->(m);
 
+MERGE (d:Director {name: 'Martin Scorsese'})
+MERGE (m:Movie {title: 'The Departed', year: 2006, imdbRating: 8.5})
+MERGE (d)-[:DIRECTED]->(m);
+
+MERGE (d:Director {name: 'Greta Gerwig'})
+MERGE (m:Movie {title: 'Lady Bird', year: 2007, imdbRating: 7.4})
+MERGE (d)-[:DIRECTED]->(m);
+
+MERGE (d:Director {name: 'Steven Spielberg'})
+MERGE (m:Movie {title: 'Jurassic Park', year: 1993, imdbRating: 8.1})
+MERGE (d)-[:DIRECTED]->(m);
+
 
 // filmes/Gênero 
 
-MERGE (m:Movie {title: 'The Matrix'})
-MERGE (g:Genre {name: 'Sci-Fi'}) 
+MATCH (m:Movie {title: 'The Matrix'})
+MATCH (g:Genre {name: 'Sci-Fi'}) 
 MERGE (m)-[:IN_GENRE]->(g);
 
-MERGE (m:Movie {title: 'The Matrix'})
-MERGE (g:Genre {name: 'Action'}) 
+MATCH (m:Movie {title: 'The Matrix'})
+MATCH (g:Genre {name: 'Action'}) 
 MERGE (m)-[:IN_GENRE]->(g);
 
-MERGE (m:Movie {title: 'Inception'})
-MERGE (g:Genre {name: 'Sci-Fi'}) 
+MATCH (m:Movie {title: 'Inception'})
+MATCH (g:Genre {name: 'Sci-Fi'}) 
 MERGE (m)-[:IN_GENRE]->(g);
 
-MERGE (m:Movie {title: 'Inception'})
-MERGE (g:Genre {name: 'Action'}) 
+MATCH (m:Movie {title: 'Inception'})
+MATCH (g:Genre {name: 'Action'}) 
 MERGE (m)-[:IN_GENRE]->(g);
 
-MERGE (m:Movie {title: 'Inception'})
-MERGE (g:Genre {name: 'Thriller'}) 
+MATCH (m:Movie {title: 'Inception'})
+MATCH (g:Genre {name: 'Thriller'}) 
 MERGE (m)-[:IN_GENRE]->(g);
 
-MERGE (m:Movie {title: 'The Godfather'})
-MERGE (g:Genre {name: 'Crime'}) 
+MATCH (m:Movie {title: 'The Godfather'})
+MATCH (g:Genre {name: 'Crime'}) 
 MERGE (m)-[:IN_GENRE]->(g);
 
-MERGE (m:Movie {title: 'The Godfather'})
-MERGE (g:Genre {name: 'Drama'}) 
+MATCH (m:Movie {title: 'The Godfather'})
+MATCH (g:Genre {name: 'Drama'}) 
 MERGE (m)-[:IN_GENRE]->(g);
 
-MERGE (m:Movie {title: 'Pulp Fiction'})
-MERGE (g:Genre {name: 'Crime'}) 
+MATCH (m:Movie {title: 'Pulp Fiction'})
+MATCH (g:Genre {name: 'Crime'}) 
 MERGE (m)-[:IN_GENRE]->(g);
 
-MERGE (m:Movie {title: 'Pulp Fiction'})
-MERGE (g:Genre {name: 'Drama'}) 
+MATCH (m:Movie {title: 'Pulp Fiction'})
+MATCH (g:Genre {name: 'Drama'}) 
 MERGE (m)-[:IN_GENRE]->(g);
 
-MERGE (m:Movie {title: 'The Dark Knight'})
-MERGE (g:Genre {name: 'Action'}) 
+MATCH (m:Movie {title: 'The Dark Knight'})
+MATCH (g:Genre {name: 'Action'}) 
 MERGE (m)-[:IN_GENRE]->(g);
 
-MERGE (m:Movie {title: 'The Dark Knight'})
-MERGE (g:Genre {name: 'Crime'}) 
+MATCH (m:Movie {title: 'The Dark Knight'})
+MATCH (g:Genre {name: 'Crime'}) 
 MERGE (m)-[:IN_GENRE]->(g);
 
-MERGE (m:Movie {title: 'The Dark Knight'})
-MERGE (g:Genre {name: 'Drama'}) 
+MATCH (m:Movie {title: 'The Dark Knight'})
+MATCH (g:Genre {name: 'Drama'}) 
 MERGE (m)-[:IN_GENRE]->(g);
 
-MERGE (m:Movie {title: 'Forrest Gump'})
-MERGE (g:Genre {name: 'Drama'}) 
+MATCH (m:Movie {title: 'Forrest Gump'})
+MATCH (g:Genre {name: 'Drama'}) 
 MERGE (m)-[:IN_GENRE]->(g);
 
-MERGE (m:Movie {title: 'Forrest Gump'})
-MERGE (g:Genre {name: 'Romance'}) 
+MATCH (m:Movie {title: 'Forrest Gump'})
+MATCH (g:Genre {name: 'Romance'}) 
 MERGE (m)-[:IN_GENRE]->(g);
 
-MERGE (m:Movie {title: 'Fight Club'})
-MERGE (g:Genre {name: 'Drama'}) 
+MATCH (m:Movie {title: 'Fight Club'})
+MATCH (g:Genre {name: 'Drama'}) 
 MERGE (m)-[:IN_GENRE]->(g);
 
-MERGE (m:Movie {title: 'Interstellar'})
-MERGE (g:Genre {name: 'Sci-Fi'}) 
+MATCH (m:Movie {title: 'Interstellar'})
+MATCH (g:Genre {name: 'Sci-Fi'}) 
 MERGE (m)-[:IN_GENRE]->(g);
 
-MERGE (m:Movie {title: 'Interstellar'})
-MERGE (g:Genre {name: 'Drama'}) 
+MATCH (m:Movie {title: 'Interstellar'})
+MATCH (g:Genre {name: 'Drama'}) 
 MERGE (m)-[:IN_GENRE]->(g);
 
-MERGE (m:Movie {title: 'Parasite'})
-MERGE (g:Genre {name: 'Thriller'}) 
+MATCH (m:Movie {title: 'Parasite'})
+MATCH (g:Genre {name: 'Thriller'}) 
 MERGE (m)-[:IN_GENRE]->(g);
 
-MERGE (m:Movie {title: 'Parasite'})
-MERGE (g:Genre {name: 'Drama'}) 
+MATCH (m:Movie {title: 'Parasite'})
+MATCH (g:Genre {name: 'Drama'}) 
 MERGE (m)-[:IN_GENRE]->(g);
 
-MERGE (m:Movie {title: 'The Lord of the Rings: The Fellowship of the Ring'})
-MERGE (g:Genre {name: 'Fantasy'}) 
+MATCH (m:Movie {title: 'The Lord of the Rings: The Fellowship of the Ring'})
+MATCH (g:Genre {name: 'Fantasy'}) 
 MERGE (m)-[:IN_GENRE]->(g);
 
-MERGE (m:Movie {title: 'The Lord of the Rings: The Fellowship of the Ring'})
-MERGE (g:Genre {name: 'Adventure'}) 
+MATCH (m:Movie {title: 'The Lord of the Rings: The Fellowship of the Ring'})
+MATCH (g:Genre {name: 'Adventure'}) 
 MERGE (m)-[:IN_GENRE]->(g);
 
-MERGE (m:Movie {title: 'Star Wars: Episode IV - A New Hope'})
-MERGE (g:Genre {name: 'Sci-Fi'}) 
+MATCH (m:Movie {title: 'Star Wars: Episode IV - A New Hope'})
+MATCH (g:Genre {name: 'Sci-Fi'}) 
 MERGE (m)-[:IN_GENRE]->(g);
 
-MERGE (m:Movie {title: 'Star Wars: Episode IV - A New Hope'})
-MERGE (g:Genre {name: 'Adventure'}) 
+MATCH (m:Movie {title: 'Star Wars: Episode IV - A New Hope'})
+MATCH (g:Genre {name: 'Adventure'}) 
 MERGE (m)-[:IN_GENRE]->(g);
 
-MERGE (m:Movie {title: 'Joker'})
-MERGE (g:Genre {name: 'Crime'}) 
+MATCH (m:Movie {title: 'Joker'})
+MATCH (g:Genre {name: 'Crime'}) 
 MERGE (m)-[:IN_GENRE]->(g);
 
-MERGE (m:Movie {title: 'Joker'})
-MERGE (g:Genre {name: 'Drama'}) 
+MATCH (m:Movie {title: 'Joker'})
+MATCH (g:Genre {name: 'Drama'}) 
 MERGE (m)-[:IN_GENRE]->(g);
 
-MERGE (m:Movie {title: 'Joker'})
-MERGE (g:Genre {name: 'Thriller'}) 
+MATCH (m:Movie {title: 'Joker'})
+MATCH (g:Genre {name: 'Thriller'}) 
 MERGE (m)-[:IN_GENRE]->(g);
 
-MERGE (m:Movie {title: 'Coco'})
-MERGE (g:Genre {name: 'Animation'}) 
+MATCH (m:Movie {title: 'Coco'})
+MATCH (g:Genre {name: 'Animation'}) 
 MERGE (m)-[:IN_GENRE]->(g);
 
-MERGE (m:Movie {title: 'Coco'})
-MERGE (g:Genre {name: 'Adventure'}) 
+MATCH (m:Movie {title: 'Coco'})
+MATCH (g:Genre {name: 'Adventure'}) 
 MERGE (m)-[:IN_GENRE]->(g);
 
-MERGE (m:Movie {title: 'Coco'})
-MERGE (g:Genre {name: 'Fantasy'}) 
+MATCH (m:Movie {title: 'Coco'})
+MATCH (g:Genre {name: 'Fantasy'}) 
 MERGE (m)-[:IN_GENRE]->(g);
 
 // Séries/Gêneros
 
-MERGE (s:Series {title: 'Game of Thrones'})
-MERGE (g:Genre {name: 'Fantasy'})
+MATCH (s:Series {title: 'Game of Thrones'})
+MATCH (g:Genre {name: 'Fantasy'})
 MERGE (s)-[:IN_GENRE]->(g);
 
-MERGE (s:Series {title: 'Game of Thrones'})
-MERGE (g:Genre {name: 'Adventure'})
+MATCH (s:Series {title: 'Game of Thrones'})
+MATCH (g:Genre {name: 'Adventure'})
 MERGE (s)-[:IN_GENRE]->(g);
 
-MERGE (s:Series {title: 'Game of Thrones'})
-MERGE (g:Genre {name: 'Drama'})
+MATCH (s:Series {title: 'Game of Thrones'})
+MATCH (g:Genre {name: 'Drama'})
 MERGE (s)-[:IN_GENRE]->(g);
 
-MERGE (s:Series {title: 'Breaking Bad'})
-MERGE (g:Genre {name: 'Crime'})
+MATCH (s:Series {title: 'Breaking Bad'})
+MATCH (g:Genre {name: 'Crime'})
 MERGE (s)-[:IN_GENRE]->(g);
 
-MERGE (s:Series {title: 'Breaking Bad'})
-MERGE (g:Genre {name: 'Drama'})
+MATCH (s:Series {title: 'Breaking Bad'})
+MATCH (g:Genre {name: 'Drama'})
 MERGE (s)-[:IN_GENRE]->(g);
 
-MERGE (s:Series {title: 'Breaking Bad'})
-MERGE (g:Genre {name: 'Thriller'})
+MATCH (s:Series {title: 'Breaking Bad'})
+MATCH (g:Genre {name: 'Thriller'})
 MERGE (s)-[:IN_GENRE]->(g);
 
-MERGE (s:Series {title: 'Stranger Things'})
-MERGE (g:Genre {name: 'Sci-Fi'})
+MATCH (s:Series {title: 'Stranger Things'})
+MATCH (g:Genre {name: 'Sci-Fi'})
 MERGE (s)-[:IN_GENRE]->(g);
 
-MERGE (s:Series {title: 'Stranger Things'})
-MERGE (g:Genre {name: 'Horror'})
+MATCH (s:Series {title: 'Stranger Things'})
+MATCH (g:Genre {name: 'Horror'})
 MERGE (s)-[:IN_GENRE]->(g);
 
-MERGE (s:Series {title: 'Stranger Things'})
-MERGE (g:Genre {name: 'Fantasy'})
+MATCH (s:Series {title: 'Stranger Things'})
+MATCH (g:Genre {name: 'Fantasy'})
 MERGE (s)-[:IN_GENRE]->(g);
 
-MERGE (s:Series {title: 'The Office'})
-MERGE (g:Genre {name: 'Comedy'})
+MATCH (s:Series {title: 'The Office'})
+MATCH (g:Genre {name: 'Comedy'})
 MERGE (s)-[:IN_GENRE]->(g);
 
-MERGE (s:Series {title: 'Friends'})
-MERGE (g:Genre {name: 'Comedy'})
+MATCH (s:Series {title: 'Friends'})
+MATCH (g:Genre {name: 'Comedy'})
 MERGE (s)-[:IN_GENRE]->(g);
 
-MERGE (s:Series {title: 'Friends'})
-MERGE (g:Genre {name: 'Romance'})
+MATCH (s:Series {title: 'Friends'})
+MATCH (g:Genre {name: 'Romance'})
 MERGE (s)-[:IN_GENRE]->(g);
 
-MERGE (s:Series {title: 'The Witcher'})
-MERGE (g:Genre {name: 'Fantasy'})
+MATCH (s:Series {title: 'The Witcher'})
+MATCH (g:Genre {name: 'Fantasy'})
 MERGE (s)-[:IN_GENRE]->(g);
 
-MERGE (s:Series {title: 'The Witcher'})
-MERGE (g:Genre {name: 'Adventure'})
+MATCH (s:Series {title: 'The Witcher'})
+MATCH (g:Genre {name: 'Adventure'})
 MERGE (s)-[:IN_GENRE]->(g);
 
-MERGE (s:Series {title: 'The Last of Us'})
-MERGE (g:Genre {name: 'Horror'})
+MATCH (s:Series {title: 'The Last of Us'})
+MATCH (g:Genre {name: 'Horror'})
 MERGE (s)-[:IN_GENRE]->(g);
 
-MERGE (s:Series {title: 'The Last of Us'})
-MERGE (g:Genre {name: 'Adventure'})
+MATCH (s:Series {title: 'The Last of Us'})
+MATCH (g:Genre {name: 'Adventure'})
 MERGE (s)-[:IN_GENRE]->(g);
+ 
